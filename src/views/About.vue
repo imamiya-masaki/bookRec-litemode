@@ -6,6 +6,12 @@
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
+      <span v-if="this.list.length >= this.pageing">
+      {{this.pageing+1}} / {{this.list.length+1}}
+      </span>
+      <ion-button v-else>
+        アプリダウンロード！！！
+      </ion-button>
       <img :src="this.list[this.pageing]"/>
     </ion-content>
     <ion-footer>
